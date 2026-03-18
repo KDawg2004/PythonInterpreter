@@ -1,2 +1,3 @@
 # PythonInterpreter
 A mini language interpreter built in Python using the lark parsing library.
+The code has three main pieces working together. First, the grammar defines the rules of the language, basically what valid code looks like, written in a notation Lark understands. Second, the Env class manages variables and scoping. It works like a stack of dictionaries,  when you enter a block or function, it opens a new scope, and when you leave, it closes it. This is how variables stay local to where they're defined. Third, the Eval class is the actual interpreter, it walks the parsed syntax tree and executes each piece (adding numbers, running loops, calling functions, etc.).
