@@ -1,0 +1,1 @@
+let inc = lambda x: x+1 in inc(1)
